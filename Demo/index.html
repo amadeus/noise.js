@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Noise Generator</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../Source/Noise.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css" media="screen">
+		.floaty {
+			float:left;
+			margin:20px;
+			width:200px;
+			height:200px;
+			background-color:#fff;
+		}
+	</style>
+</head>
+<body>
+<div id="noise1" class="floaty"></div>
+<div id="noise2" class="floaty"></div>
+<div id="noise3" class="floaty"></div>
+<script type="text/javascript" charset="utf-8">
+new Noise({
+	selector: 'html'
+});
+
+new Noise({
+	selector: '#noise1',
+	opacityClamp: 0.5
+});
+
+new Noise({
+	selector: 'noise2',
+	opacityClamp: 1,
+	width: 10,
+	height: 10
+});
+
+new Noise({
+	selector: '#noise3',
+	opacityClamp: .2
+});
+</script>
+</body>
+</html>
